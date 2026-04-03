@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "created_at": "",
+  "updated_at": "",
+  "capital": {
+    "initial_usd": 0,
+    "total_usd": 0,
+    "available_usd": 0
+  },
+  "positions": [
+    {
+      "_example": true,
+      "token": "EXAMPLE",
+      "mint": "...",
+      "entry_price": 0,
+      "entry_time": "",
+      "amount": 0,
+      "cost_usd": 0,
+      "atr_at_entry": 0,
+      "atr_multiplier": 2.0,
+      "stop_loss_price": 0,
+      "trailing_stop_percent": -0.06,
+      "trailing_stop_active": false,
+      "trailing_stop_activation_threshold": 0.10,
+      "peak_price_since_entry": 0,
+      "take_profit_stage1_percent": 0.30,
+      "take_profit_stage1_sell_ratio": 0.50,
+      "take_profit_stage1_hit": false,
+      "breakeven_stop_active": false,
+      "staged_take_profit": true,
+      "exit_deadline": "",
+      "extended": false,
+      "scale_in": false,
+      "scale_in_remaining_percent": 0.40,
+      "scale_in_wait_cycles": 0,
+      "triggered_rules": [],
+      "conviction_score": 0,
+      "conviction_level": "high | medium | low",
+      "regime_at_entry": "",
+      "thesis": {
+        "summary": "",
+        "invalidation_conditions": [],
+        "rr_ratio": 0,
+        "rr_calculation": {
+          "target_price": 0,
+          "stop_price": 0,
+          "potential_profit_percent": 0,
+          "potential_loss_percent": 0
+        },
+        "status": "alive | weakening | dead",
+        "events": []
+      }
+    }
+  ],
+  "closed_trades": [
+    {
+      "_example": true,
+      "token": "EXAMPLE",
+      "mint": "...",
+      "entry_price": 0,
+      "entry_time": "",
+      "exit_price": 0,
+      "exit_time": "",
+      "amount": 0,
+      "cost_usd": 0,
+      "revenue_usd": 0,
+      "pnl_usd": 0,
+      "pnl_percent": 0,
+      "peak_price_during_hold": 0,
+      "atr_at_entry": 0,
+      "atr_at_exit": 0,
+      "exit_reason": "atr_stop | trailing_stop | take_profit | time_limit | sell_watchlist_alert | regime_shift | thesis_invalidation",
+      "triggered_rules": [],
+      "conviction_score": 0,
+      "regime_at_entry": "",
+      "regime_at_exit": "",
+      "hold_days": 0,
+      "thesis_at_exit": "alive | weakening | dead",
+      "thesis_death_reason": "",
+      "lesson": "",
+      "mutation_trade": false,
+      "mutation_id": ""
+    }
+  ],
+  "daily_pnl": {},
+  "weekly_pnl": {},
+  "price_history": {},
+  "weekly_summaries": [],
+  "metrics": {
+    "total_trades": 0,
+    "win_rate": 0,
+    "profit_factor": 0,
+    "expectancy": 0,
+    "max_drawdown_percent": 0,
+    "sharpe_4w": 0,
+    "sortino_4w": 0
+  }
+}

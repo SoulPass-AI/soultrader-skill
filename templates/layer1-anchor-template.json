@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "last_updated": "",
+  "update_frequency": "weekly_or_on_regime_change",
+
+  "regime": {
+    "classification": "Ranging",
+    "confidence": 0.7,
+    "pillars": {
+      "trend": {
+        "status": "neutral",
+        "btc_14d_high": 0,
+        "btc_14d_low": 0,
+        "btc_current": 0,
+        "btc_position_in_range": 0.5,
+        "btc_7d_change_percent": 0,
+        "sol_14d_high": 0,
+        "sol_14d_low": 0,
+        "sol_current": 0,
+        "sol_position_in_range": 0.5,
+        "sol_7d_change_percent": 0,
+        "sol_vs_btc_trend": "neutral",
+        "note": ""
+      },
+      "sm_consensus": {
+        "status": "neutral",
+        "oracle_wallets_net_direction": "mixed",
+        "oracle_buying_count": 0,
+        "oracle_selling_count": 0,
+        "oracle_holding_count": 0,
+        "bias_strength": 0,
+        "fund_flow_direction": "neutral",
+        "fund_flow_tokens_positive": 0,
+        "fund_flow_tokens_negative": 0,
+        "sm_netflow_7d_aggregate": "neutral",
+        "note": ""
+      },
+      "ecosystem_health": {
+        "status": "neutral",
+        "solana_dex_volume_trend": "stable",
+        "solana_tvl_trend": "stable",
+        "stablecoin_flow_direction": "neutral",
+        "new_token_launches_7d": 0,
+        "meme_coin_sentiment": "neutral",
+        "note": ""
+      }
+    },
+    "pillar_summary": "",
+    "allowed_bias": "neutral",
+    "regime_change_triggers": []
+  },
+
+  "macro_context": {
+    "geopolitical": "",
+    "monetary": "",
+    "crypto_narrative": "",
+    "solana_specific": "",
+    "note": ""
+  },
+
+  "history": [
+    {
+      "date": "",
+      "regime": "",
+      "event": ""
+    }
+  ]
+}

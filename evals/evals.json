@@ -1,0 +1,29 @@
+{
+  "skill_name": "soulhunter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just installed soulhunter and I have 500 USDC in my soulpass wallet. This is my first time running it. Do /soulhunter research to find what to trade this week.",
+      "expected_output": "Agent should: 1) Initialize ~/.soulhunter/ directory + layer1-anchor.json, 2) Check nansen account credits, 3) Run Step 0 Layer 1 Anchor with TREND-FIRST approach (SOL Weinstein stage, BTC/SOL relative strength, SM consensus as validation not primary, set regime_change_triggers), 4) Run Step 1 Signal A (SM netflow + Fund netflow + SM holdings), 5) Run Step 2 Signal B (SM dex-trades filtered >$1K, profiler pnl-summary, oracle direction bias), 6) Run Step 3 Signal C (token info, who-bought-sold), 7) Run Step 3.5 Signal D (SM DCAs, Nansen indicators), 8) Calculate conviction scores using cold-start weights (A:60%, B:10%, C:20%, D:10%), 9) Calculate R:R ratio for each candidate (reject if < 3:1), 10) Generate thesis with invalidation conditions for each watchlist entry, 11) Generate strategy.json with layer1_anchor_ref, 12) Report credit usage and Layer 1 anchor summary",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I already have a strategy.json from last week's research. Run /soulhunter execute to check if any trades should happen today. My portfolio has $500 starting capital and no open positions yet.",
+      "expected_output": "Agent should: 1) Read strategy.json and validate it hasn't expired, 2) Read portfolio.json, 3) Check soulpass balance, 4) Run MDP Step 1 (collect 3 pillars: BlockBeats news + SM data + soulpass prices), 5) Check BTC/SOL prices for regime override, 6) Run Monitor Loop first (no positions so mostly skipped), 7) For each watchlist token: run full MDP with agent debate (Buy vs Sell subagents), check conviction vs regime threshold, check R:R >= 3:1, check 24h price change, 8) Show MDP decision output format (news/SM/technical pillars + buy case + sell case + synthesis), 9) Execute qualifying trades via soulpass swap, 10) Record trades in portfolio.json with thesis + MDP log",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "It's been a week since I started trading. I have 2 open positions (PUMP at +12% and RENDER at -8%). Run /soulhunter evolve to see how I'm doing and improve the strategy.",
+      "expected_output": "Agent should: 1) Load portfolio.json with trade history, 2) Calculate performance metrics (win rate, PnL, profit factor), 3) Do regime breakdown (trend-first accuracy), 4) Attribution analysis on triggered_rules, 5) Thesis quality attribution (saves vs misses), 6) Layer 1 anchor accuracy review (did trend-first approach help?), 7) Signal A/B/C/D relative performance tracking, 8) MDP debate quality review (did debate change decisions? Were debate-overridden actions correct?), 9) Exit strategy analysis including thesis_invalidation exits, 10) Create/update rule-history.json with exponential decay, 11) Oracle wallet validation, 12) Calibrate exit parameters based on evidence, 13) Generate weekly report to ~/.soulhunter/reports/, 14) If any trade closed badly, apply real-time evolution: update rules immediately, don't wait for next Sunday",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Run /soulhunter monitor. I have 3 open positions: JTO at entry $3.42 (thesis: SM fund flow acceleration, stop at $2.92), PUMP at entry $0.035 (thesis: oracle wallet accumulation, trailing stop active at $0.048), and RENDER at entry $5.10 (thesis: DCA institutional accumulation, stop at $4.33).",
+      "expected_output": "Agent should: 1) Run MDP Step 0: collect 3 pillars (BlockBeats news + cached SM data from strategy.json + soulpass prices), 2) Parse news headlines for HIGH IMPACT events, 3) Check each stop-loss (highest priority — mechanical, no debate), 4) Check trailing stops (update peak for PUMP), 5) Check take-profit triggers (mechanical), 6) Winner management: move stop to breakeven only after 2x ATR move from entry, 7) Thesis health check for each position — if thesis dead, run MDP debate (hold vs close) then act, 8) Time limit check, 9) Circuit breaker check (daily/weekly loss), 10) Update portfolio.json with price history and thesis events, 11) Print monitor summary with MDP log for any judgment calls made",
+      "files": []
+    }
+  ]
+}

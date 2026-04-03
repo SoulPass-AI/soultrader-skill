@@ -1,0 +1,196 @@
+{
+  "version": 4,
+  "generated_at": "",
+  "valid_until": "",
+  "credits_used": 0,
+  "credits_remaining": 0,
+
+  "layer1_anchor_ref": {
+    "classification": "Ranging",
+    "confidence": 0.7,
+    "allowed_bias": "neutral",
+    "pillar_summary": "",
+    "last_updated": ""
+  },
+
+  "regime": {
+    "classification": "risk_on | ranging | risk_off | btc_divergent | sol_outperform",
+    "btc_trend": "bull | bear | chop",
+    "sol_trend": "bull | bear | chop",
+    "btc_price_at_generation": 0,
+    "sol_price_at_generation": 0,
+    "btc_7d_change_percent": 0,
+    "sol_7d_change_percent": 0,
+    "override_active": false,
+    "override_reason": ""
+  },
+
+  "signal_a": {
+    "_description": "SM Consensus + Fund Flow Acceleration (45% of conviction)",
+    "flow_acceleration_table": [
+      {
+        "token": "EXAMPLE",
+        "mint": "ExampleMintAddress...",
+        "net_flow_7d_usd": 0,
+        "net_flow_30d_usd": 0,
+        "flow_ratio_7d_30d": 0,
+        "trader_count": 0,
+        "signal_type": "ACCELERATING | FRESH | DECELERATING | REVERSING | CONTRARIAN",
+        "fund_flow_positive": false,
+        "sm_holdings_value_usd": 0,
+        "sm_holders_count": 0
+      }
+    ]
+  },
+
+  "signal_b": {
+    "_description": "Oracle Wallet Tracking + Direction Bias (25% of conviction)",
+    "oracle_wallets_active": 0,
+    "oracle_direction_bias": {
+      "net_direction": "accumulating | distributing | mixed",
+      "accumulating_count": 0,
+      "distributing_count": 0,
+      "bias_strength": 0,
+      "note": ""
+    },
+    "oracle_signals": [
+      {
+        "token": "EXAMPLE",
+        "mint": "...",
+        "oracle_wallets_buying": [],
+        "oracle_weight_sum": 0,
+        "oracle_new_position": false
+      }
+    ]
+  },
+
+  "signal_c": {
+    "_description": "Token-Level Confirmation (15% of conviction)",
+    "token_details": [
+      {
+        "token": "EXAMPLE",
+        "mint": "...",
+        "market_cap_usd": 0,
+        "total_holders": 0,
+        "liquidity_usd": 0,
+        "token_age_days": 0,
+        "accumulation_ratio": 0,
+        "who_bought_sold_summary": "concentrated | distributed"
+      }
+    ]
+  },
+
+  "signal_d": {
+    "_description": "DCA Intelligence + Ecosystem Signals (15% of conviction)",
+    "sm_dca_orders": [
+      {
+        "token": "EXAMPLE",
+        "mint": "...",
+        "dca_wallet_count": 0,
+        "total_dca_volume_usd": 0,
+        "dca_vs_market_cap_ratio": 0
+      }
+    ],
+    "nansen_indicators": [
+      {
+        "token": "EXAMPLE",
+        "mint": "...",
+        "risk_score": 0,
+        "reward_score": 0,
+        "risk_percentile": 0,
+        "reward_percentile": 0
+      }
+    ]
+  },
+
+  "watchlist": [
+    {
+      "token": "EXAMPLE",
+      "mint": "ExampleMintAddress...",
+
+      "conviction_score": 0.00,
+      "conviction_level": "high | medium | low",
+      "conviction_breakdown": {
+        "signal_a_score": 0.00,
+        "signal_a_reasons": [],
+        "signal_b_score": 0.00,
+        "signal_b_reasons": [],
+        "signal_c_score": 0.00,
+        "signal_c_reasons": [],
+        "signal_d_score": 0.00,
+        "signal_d_reasons": [],
+        "penalties_applied": [],
+        "penalty_total": 0.00
+      },
+
+      "thesis": {
+        "summary": "",
+        "invalidation_conditions": [],
+        "rr_ratio": 0,
+        "rr_calculation": {
+          "target_price": 0,
+          "stop_price": 0,
+          "potential_profit_percent": 0,
+          "potential_loss_percent": 0
+        }
+      },
+
+      "position": {
+        "max_loss_at_stop_percent": 0.06,
+        "calculated_position_usd": 0,
+        "stop_loss_atr_multiplier": 2.0,
+        "stop_loss_fallback_percent": -0.15,
+        "take_profit_stage1_percent": 0.30,
+        "take_profit_stage1_sell_ratio": 0.50,
+        "take_profit_full_exit_percent": 0.25,
+        "staged_take_profit": true,
+        "trailing_stop_percent": -0.06,
+        "trailing_stop_activation": 0.10,
+        "max_hold_days": 14,
+        "staged_entry": true,
+        "staged_first_percent": 0.60
+      },
+
+      "entry_rules": {
+        "min_conviction": 0.35,
+        "min_rr_ratio": 3.0,
+        "price_pullback_from_7d_high": 0.05,
+        "price_change_24h_max": 0.08,
+        "price_change_24h_min": -0.15,
+        "high_conviction_override_24h_max": 0.12
+      }
+    }
+  ],
+
+  "sell_watchlist": [
+    {
+      "token": "EXAMPLE_SELL",
+      "mint": "...",
+      "signals": [],
+      "severity": "high | medium",
+      "action": "recommend_exit | tighten_stop | monitor"
+    }
+  ],
+
+  "blacklist": [
+    {
+      "token": "EXAMPLE_BAD",
+      "mint": "...",
+      "reason": ""
+    }
+  ],
+
+  "risk_limits": {
+    "max_open_positions": 5,
+    "max_single_trade_loss_percent": 0.08,
+    "max_total_portfolio_loss_percent": 0.20,
+    "max_portfolio_loss_risk_off_percent": 0.12,
+    "daily_loss_stop_percent": -0.08,
+    "weekly_loss_freeze_percent": -0.12,
+    "small_capital_mode": false,
+    "small_capital_threshold_usd": 1000
+  },
+
+  "next_research_date": "",
+  "next_research_reason": ""
+}
